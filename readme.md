@@ -1,5 +1,4 @@
-# BASE NODE API
-## version: 0.0.1
+# **BASE NODE API**
 
 <!-- <h1 align="center">
     <img src="https://ik.imagekit.io/kudysak8uv/logo2_wkzFleEF6.png">
@@ -19,13 +18,13 @@
 - [Tecnologias Utilizadas | Uses Tecnologies](#-tecnologias-utilizadas)
 - [Como baixar o projeto | How to clone and runner project](#-como-baixar-o-projeto)
 
-## 🔖&nbsp; Sobre | About
 
+## 🔖&nbsp; Sobre
 O projeto **Base Node API** é uma base para criar serviços backend com NodeJs.
+
 ---
 
 ## 🚀 Tecnologias utilizadas | Used technologies
-
 O projeto foi desenvolvido utilizando as seguintes tecnologias
 This project is developed using the stack
 
@@ -58,4 +57,4 @@ This project is developed using the stack
 
 ---
 
-Desenvolvido 💜 por Hugo Almeida
+Desenvolvido :bowtie: por Hugo Almeida

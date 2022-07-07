@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
-    "dev": "set debug=* && ts-node-dev --respawn src/core/server.ts", 
-    "build" : "tsc && node ./build/app.js",
+    "dev": "set debug=* && ts-node-dev --respawn --transpile-only src/core/server.ts",
+    "build": "tsc && node ./build/app.js",
+    "typeorm": "ts-node-dev node_modules/.bin/typeorm",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
