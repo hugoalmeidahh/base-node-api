@@ -1,9 +1,9 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, DeleteDateColumn } from "typeorm";
 
 @Entity()
 export class User {
 
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn("uuid")
   id: number;
 
   @Column()
@@ -18,7 +18,21 @@ export class User {
   @Column()
   isActive: boolean;
 
-  @Column()
-  createAt: string;
+  @CreateDateColumn({
+    type: 'timestamp',
+    precision: 3
+  })
+  createdAt: Date;
 
+  @UpdateDateColumn({
+    type: 'timestamp',
+    precision: 3
+  })
+  updatedAt: Date;
+
+  @DeleteDateColumn({
+    type: 'timestamp',
+    precision: 3
+  })
+  deletedDate: Date;
 }

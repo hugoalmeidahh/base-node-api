@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn, TableForeignKey } from "typeorm";
+import { User } from "../user/models";
+import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn, TableForeignKey } from "typeorm";
 
 @Entity()
 export class Student {
@@ -9,8 +10,9 @@ export class Student {
   @Column()
   name: string;
 
-  @Column()
-  birthday: string;
+  @OneToOne(() => User)
+  @JoinColumn()
+  user: User;
 
   @Column()
   createAt: string;
