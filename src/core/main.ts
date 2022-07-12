@@ -1,6 +1,10 @@
 import "reflect-metadata"
 import express, { Application, Request, Response } from 'express';
 import bodyParser from 'body-parser';
+
+const dotenv = require('dotenv');
+dotenv.config();
+
 import { myDataSource } from './datasource'
 
 import { router } from './routes';

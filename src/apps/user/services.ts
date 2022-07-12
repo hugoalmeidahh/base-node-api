@@ -8,11 +8,19 @@ interface UserReadProps {
   username: string;
   email: string;
   isActive: boolean;
-}[]
+}
 
-export const listUsers = async (): Promise<UserReadProps> => {
-  const userRepository = await myDataSource.getRepository(User).find();
-  return userRepository;
+type UserList = UserReadProps[]
+
+export const listUsers = async (): Promise<UserReadProps[]> => {
+  const userRepository = await myDataSource.getRepository(User).find({});
+
+  const usersList: UserList = userRepository.map(user => {
+    delete user.passwd
+    return user
+  })
+
+  return usersList;
 }
 
 export const createUser = async (payload: any): Promise<User> => {
